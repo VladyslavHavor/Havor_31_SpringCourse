@@ -79,5 +79,5 @@ This repository keeps information for monitoring and recording attendance in lec
 - Behavior: Configure personalized settings for each course and instructor.
 
 ## Database 
-![My ERD](ERD.png)
+[My ERD diagram](https://github.com/VladyslavHavor/Havor_21_SpringCourse/blob/main/ERD.png)
 
