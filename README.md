@@ -78,3 +78,6 @@ This repository keeps information for monitoring and recording attendance in lec
 **Settings**
 - Behavior: Configure personalized settings for each course and instructor.
 
+## Database 
+![My ERD](ERD.png)
+
