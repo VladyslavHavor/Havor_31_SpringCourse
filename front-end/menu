@@ -3,95 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register/Login</title>
+    <title>Attendance System</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
             background-color: #f4f4f9;
             margin: 0;
-            padding: 20px;
+            padding: 0;
         }
 
-        form {
-            background: white;
+        header {
+            background-color: #4CAF50;
             padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            color: white;
+            font-size: 24px;
+        }
+
+        .container {
+            padding: 20px;
+            margin: 20px;
+        }
+
+        .button {
             display: inline-block;
-            margin-top: 20px;
-        }
-
-        input {
-            margin: 10px 0;
-            padding: 10px;
-            width: 90%;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-
-        button {
             background-color: #4CAF50;
             color: white;
-            border: none;
             padding: 10px 20px;
+            text-decoration: none;
+            margin: 10px;
             border-radius: 5px;
-            cursor: pointer;
+            font-size: 18px;
             font-weight: bold;
+            transition: 0.3s;
         }
 
-        button:hover {
+        .button:hover {
             background-color: #45a049;
         }
     </style>
 </head>
 <body>
-<h1 id="formTitle">Register/Login</h1>
-<form id="authForm">
-    <h2 id="roleText"></h2>
-    <input type="text" id="name" placeholder="Enter Name" required>
-    <input type="email" id="email" placeholder="Enter Email" required>
-    <input type="password" id="password" placeholder="Enter Password" required>
-    <button type="submit">Submit</button>
-</form>
+<header>
+    Attendance System
+</header>
 
-<script>
-    // Get role from URL
-    const urlParams = new URLSearchParams(window.location.search);
-    const role = urlParams.get('role');
-
-    // Update page content based on role
-    const roleText = document.getElementById('roleText');
-    const formTitle = document.getElementById('formTitle');
-    if (role === 'student') {
-        roleText.textContent = "Register/Login as Student";
-        formTitle.textContent = "Student Login/Register";
-    } else if (role === 'teacher') {
-        roleText.textContent = "Register/Login as Teacher";
-        formTitle.textContent = "Teacher Login/Register";
-    } else {
-        roleText.textContent = "Role not defined!";
-    }
-
-    // Handle form submission
-    const form = document.getElementById('authForm');
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const password = document.getElementById('password').value;
-
-        // Simple role check and redirect
-        if (role === 'student') {
-            alert(`Student ${name} logged in successfully!`);
-            window.location.href = 'student.html';
-        } else if (role === 'teacher') {
-            alert(`Teacher ${name} logged in successfully!`);
-            window.location.href = 'teacher.html';
-        } else {
-            alert('Invalid role selected!');
-        }
-    });
-</script>
+<div class="container">
+    <h1>Welcome to the Attendance System</h1>
+    <p>Select your role:</p>
+    <a href="register.html?role=student" class="button">I am a Student</a>
+    <a href="register.html?role=teacher" class="button">I am a Teacher</a>
+</div>
 </body>
 </html>
