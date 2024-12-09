@@ -35,35 +35,35 @@ Reports include information about the number of attended and missed sessions for
 
 ## REST API endpoints
 **Authentication:**
-POST /api/auth/register: Register a new user.
-POST /api/auth/login: Log in to the system.
-POST /api/auth/logout: Log out from the system.
+- POST /api/auth/register: Register a new user.
+- POST /api/auth/login: Log in to the system.
+- POST /api/auth/logout: Log out from the system.
 
 **User Management:**
-GET /api/users: Retrieve a list of all users (admin only).
-GET /api/users/{id}: Get details of a specific user.
-POST /api/users: Create a new user (admin only).
-PUT /api/users/{id}: Update user details.
-DELETE /api/users/{id}: Delete a user (admin only).
+- GET /api/users: Retrieve a list of all users (admin only).
+- GET /api/users/{id}: Get details of a specific user.
+- POST /api/users: Create a new user (admin only).
+- PUT /api/users/{id}: Update user details.
+-DELETE /api/users/{id}: Delete a user (admin only).
 
 **Course Management:**
-GET /api/subjects: Retrieve all courses.
-GET /api/subjects/{id}: Get details of a specific course.
-POST /api/subjects: Create a new course (teacher only).
-PUT /api/subjects/{id}: Update course details (teacher only).
-DELETE /api/subjects/{id}: Delete a course.
+- GET /api/subjects: Retrieve all courses.
+- GET /api/subjects/{id}: Get details of a specific course.
+- POST /api/subjects: Create a new course (teacher only).
+- PUT /api/subjects/{id}: Update course details (teacher only).
+- DELETE /api/subjects/{id}: Delete a course.
 
 **Attendance Log:**
-POST /api/attendance/lectures: Add attendance records for lectures (teacher only).
-POST /api/attendance/labs: Add attendance records for lab sessions (teacher only).
-GET /api/attendance/{courseId}/students: Get attendance details for students in a course.
+- POST /api/attendance/lectures: Add attendance records for lectures (teacher only).
+- POST /api/attendance/labs: Add attendance records for lab sessions (teacher only).
+- GET /api/attendance/{courseId}/students: Get attendance details for students in a course.
 
 **Messaging**
-POST /api/messages/students: Send a message to students (admin or teacher).
-POST /api/messages/teachers: Send a message to teachers (admin or teacher).
+- POST /api/messages/students: Send a message to students (admin or teacher).
+- POST /api/messages/teachers: Send a message to teachers (admin or teacher).
 
 **Reports**
-GET /api/reports/{courseId}/attendance: Generate attendance reports for students in a course (teacher only).
+- GET /api/reports/{courseId}/attendance: Generate attendance reports for students in a course (teacher only).
 
 ## Implemented Features in Our Project
 Completed Features:
