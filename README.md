@@ -65,7 +65,7 @@ POST /api/messages/teachers: Send a message to teachers (admin or teacher).
 **Reports**
 GET /api/reports/{courseId}/attendance: Generate attendance reports for students in a course (teacher only).
 
-**Implemented Features in Our Project**
+## Implemented Features in Our Project
 Completed Features:
 Registration for teachers and students via REST API.
 CRUD operations for managing courses (subjects) by teachers.
