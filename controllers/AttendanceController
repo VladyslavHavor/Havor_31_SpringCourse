@@ -1,0 +1,32 @@
+package com.example.lectureattendancesystem.controller;
+
+import com.example.lectureattendancesystem.model.Attendance;
+import com.example.lectureattendancesystem.service.AttendanceService;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@RestController
+@RequestMapping("/api/attendances")
+public class AttendanceController {
+    private final AttendanceService attendanceService;
+
+    public AttendanceController(AttendanceService attendanceService) {
+        this.attendanceService = attendanceService;
+    }
+
+    @GetMapping
+    public List<Attendance> getAllAttendances() {
+        return attendanceService.getAllAttendances();
+    }
+
+    @PostMapping
+    public Attendance createAttendance(@RequestBody Attendance attendance) {
+        return attendanceService.saveAttendance(attendance);
+    }
+
+    @DeleteMapping("/{id}")
+    public void deleteAttendance(@PathVariable Long id) {
+        attendanceService.deleteAttendance(id);
+    }
+}
