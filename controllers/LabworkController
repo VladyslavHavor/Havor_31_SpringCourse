@@ -1,0 +1,32 @@
+package com.example.lectureattendancesystem.controller;
+
+import com.example.lectureattendancesystem.model.Labwork;
+import com.example.lectureattendancesystem.service.LabworkService;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@RestController
+@RequestMapping("/api/labworks")
+public class LabworkController {
+    private final LabworkService labworkService;
+
+    public LabworkController(LabworkService labworkService) {
+        this.labworkService = labworkService;
+    }
+
+    @GetMapping
+    public List<Labwork> getAllLabworks() {
+        return labworkService.getAllLabworks();
+    }
+
+    @PostMapping
+    public Labwork createLabwork(@RequestBody Labwork labwork) {
+        return labworkService.saveLabwork(labwork);
+    }
+
+    @DeleteMapping("/{id}")
+    public void deleteLabwork(@PathVariable Long id) {
+        labworkService.deleteLabwork(id);
+    }
+}
