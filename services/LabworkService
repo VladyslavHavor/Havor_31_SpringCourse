@@ -1,0 +1,28 @@
+package com.example.lectureattendancesystem.service;
+
+import com.example.lectureattendancesystem.model.Labwork;
+import com.example.lectureattendancesystem.repository.LabworkRepository;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
+@Service
+public class LabworkService {
+    private final LabworkRepository labworkRepository;
+
+    public LabworkService(LabworkRepository labworkRepository) {
+        this.labworkRepository = labworkRepository;
+    }
+
+    public List<Labwork> getAllLabworks() {
+        return labworkRepository.findAll();
+    }
+
+    public Labwork saveLabwork(Labwork labwork) {
+        return labworkRepository.save(labwork);
+    }
+
+    public void deleteLabwork(Long id) {
+        labworkRepository.deleteById(id);
+    }
+}
